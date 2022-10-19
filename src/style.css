@@ -1,3 +1,7 @@
+/* the challenge gave media queries, but I could not detect any differences between
+the mobile and desktop client card appearance or aspect ratio. I tested all of chrome's mobile devices
+for aesthetic apperance to arrive at the given footer position and card dimensions */
+
 html {
     background-color: hsl(217, 54%, 11%);
     font-family: 'Outfit', sans-serif;
@@ -19,7 +23,7 @@ hr {
     height: 0.5px;
     background:rgba(139,172,218,0.25);
 }
-
+/* controls the card dimensions -- based on what I saw in the challenge, I did not make this element responsive in size */
 .card {
     position:absolute;
     background-color: hsl(216, 50%, 16%);
@@ -28,54 +32,7 @@ hr {
     border-radius: 2.5%;
     box-shadow: 0px 20px 5px 20px rgba(0,0,0,0.1), 0px 20px 25px 40px rgba(0,0,0,0.1);
 }
-
-.nft-image {
-    width:100%;
-    border-radius: 2.5%;
-}
-a.img-link:hover {
-color: hsl(178, 50%, 50%);
-}
-a {
-    color:hsl(0, 0%, 100%);
-    text-decoration: none;
-}
-a:hover {
-    color: hsl(178, 100%, 50%);
-}
-
-.light-blue-thin {
-    color: hsl(215, 51%, 70%);
-    font-weight: 300;
-}
-
-.thick-white {
-    color: hsl(0, 0%, 100%);
-    font-weight: 400;
-    font-size:20px;
-}
-
-.cyan-text {
-    color:hsl(178, 100%, 50%);
-    font-weight: 600;
-}
-
-#author {
-    font-weight:300;
-}
-
-#author:hover {
-    color: hsl(178, 100%, 50%);
-}
-
-#avatar {
-    width:30px;
-    margin-right:10px;
-    border: 0.05rem solid hsl(0, 0%, 100%);
-    border-radius: 50%;
-    vertical-align:middle;
-}
-
+/* element holding the image, text, and content on the card */
 .nft-box {
     display: flex;
     flex-wrap: wrap;
@@ -93,57 +50,14 @@ a:hover {
     margin-bottom:10px;
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    }
-.center-horizontal {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
+.nft-image {
+    width:100%;
+    border-radius: 2.5%;
 }
-.center-rel {
-    position: relative;
-    top: 50%;
-    transform: translate(0%, -50%);
+a.img-link:hover {
+color: hsl(178, 50%, 50%);
 }
-
-.nft-text {
-    justify-content:flex-end;
-}
-.clickables:hover {
-    color: hsl(178, 100%, 50%);
-}
-
-@media (max-width = 375px) {
-
-}
-
-.clickables {
-    color: hsl(0, 0%, 100%);
-}
-
-.space-between {
-    display:flex;
-    justify-content:space-between;
-}
-#bigger-margin {
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-.align-text-center {
-   
-}
-
-footer {
-    position:absolute;
-    bottom: 2.5%;
-    left: 50%;
-    transform: translate(-50%, -2.5%);
-}
-
+/* animations for image link hover start */
 #img-overlay {
     position:absolute;
     width:255px;
@@ -188,3 +102,79 @@ footer {
 #img-overlay:hover img {
     opacity: 1;
 }
+/* animations end */
+a {
+    color:hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.light-blue-thin {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.thick-white {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+    font-size:20px;
+}
+
+.cyan-text {
+    color:hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+#author {
+    font-weight:300;
+}
+
+#author:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+#avatar {
+    width:30px;
+    margin-right:10px;
+    border: 0.05rem solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    vertical-align:middle;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+.center-horizontal {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.center-rel {
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.nft-text {
+    justify-content:flex-end;
+}
+.space-between {
+    display:flex;
+    justify-content:space-between;
+}
+#bigger-margin {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+footer {
+    position:absolute;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translate(-50%, -2.5%);
+}
+
+
